@@ -13,6 +13,7 @@ MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://cran.r-project.
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/vincenzocoia/igcop/workflows/R-CMD-check/badge.svg)](https://github.com/vincenzocoia/igcop/actions)
+[![R-CMD-check](https://github.com/vincenzocoia/igcop/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/vincenzocoia/igcop/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of igcop is to provide computational tools for the Integrated
@@ -20,13 +21,11 @@ Gamma (IG) and Integrated Gamma Limit (IGL) copula families.
 
 ## Installation
 
-igcop is not yet available on [CRAN](https://CRAN.R-project.org), but
-can be downloaded from this repository using devtools. Just execute this
-line of code in an R instance, after ensuring you have the devtools R
-package installed:
+igcop is available on [CRAN](https://CRAN.R-project.org), and can be
+installed by running
 
 ``` r
-devtools::install_github("vincenzocoia/igcop")
+install.packages("igcop")
 ```
 
 ## Definition
@@ -131,15 +130,16 @@ qcondig12(v, u, theta = 5, alpha = 3)
 Generating 5 values from an IG copula:
 
 ``` r
+set.seed(42)
 rig(5, theta = 5, alpha = 4)
 #> # A tibble: 5 × 2
-#>       u      v
-#>   <dbl>  <dbl>
-#> 1 0.721 0.952 
-#> 2 0.496 0.790 
-#> 3 0.509 0.0193
-#> 4 0.872 0.271 
-#> 5 0.333 0.672
+#>       u     v
+#>   <dbl> <dbl>
+#> 1 0.915 0.598
+#> 2 0.937 0.848
+#> 3 0.286 0.134
+#> 4 0.830 0.761
+#> 5 0.642 0.770
 ```
 
 ## Developers
